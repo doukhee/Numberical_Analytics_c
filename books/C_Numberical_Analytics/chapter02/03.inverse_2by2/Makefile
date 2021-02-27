@@ -1,8 +1,8 @@
 CC = gcc
 
-SRCS = inner_product.c
+SRCS = inverse_2by2.c
 
-TARGET = Inner_product
+TARGET = inverse_2by2
 
 BUILDDIR = buildDir
 
@@ -12,6 +12,7 @@ all: clean createdirs build
 
 createdirs:
 	$(shell mkdir $(BUILDDIR))
+
 
 build: $(COBJS)
 	$(CC) -o $(BUILDDIR)/$(TARGET) $^
