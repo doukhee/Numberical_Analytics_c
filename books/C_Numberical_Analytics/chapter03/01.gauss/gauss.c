@@ -88,12 +88,13 @@ void gauss(int matrixSize){
     /** 역대입법 공식 */
     /** 역대입법을 이용한 값을 구하기 위한 반복문 */
     for(int i = matrixSize - 1; i >= 0; i--){
-        /** */
+        /** 역대입법을 위한 반복문 */
         for(int k = i + 1; k < matrixSize; k++){
-            /** */
+            /** 역대입으로 하나씩 행렬의 요소에 특정 값 뺴주기 */
             A[i][matrixSize] = A[i][matrixSize] - A[i][k] * A[k][matrixSize];
         }
-        /** */
+        /** 역대입으로 구하고자 하는 값의 곱셈 되어 있는 값을 나눠주기 */
+        /** 8x = y == x = y/8 */
         A[i][matrixSize] = A[i][matrixSize] / A[i][i];
     }
     /** 결과값을 알려주기 위한 출력 */
@@ -106,4 +107,15 @@ void gauss(int matrixSize){
     /** 출력 시 값을 보기 편하게 하기 위한 한 줄 띄기 */
     printf("\r\n");
     return;
+}
+
+void showMatrix(double (*matrix)[51], int msize){
+    printf("\r\nprint matrix\r\n");
+    for(int i = 0; i < msize; i++){
+        for(int j = 0; j < msize + 1; j++){
+            printf("%lf\t", matrix[i][j]);
+        }
+        printf("\r\n");
+    }
+    printf("\r\n");
 }
