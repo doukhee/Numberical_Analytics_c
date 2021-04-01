@@ -1,14 +1,18 @@
 #include <stdio.h>
 #include <math.h>
 
-void SOR(int , int, double, double);
-
+/** SOR로 계산하는 함수 */
+void SOR(int MatrixSize, int Max, double eps, double freeVariable);
+/** 입력 받을 행렬을 저장할 변수 */
 double A[50][51];
 
+/** 행렬의 초기 값 입력 받을 변수 */
 double x[50];
 
 int main(){
+    /** 행렬의 크기 및 최대 반복 횟수를 저장할 변수 */
     int MatrixSize, Max;
+    /** 허용 오차 및 */
     double eps, freeVariable, sum;
     printf("matrix A size ? ");
     scanf("%d", &MatrixSize);
