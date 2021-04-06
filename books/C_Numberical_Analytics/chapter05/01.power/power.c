@@ -30,7 +30,7 @@ int main(int argc, char **argv){
 
 void Power(int matrixSize, int Max){
     double y[50];
-    double eigval, eta, sum;
+    double eigenValue, eta, sum;
     for(int k = 1; k <= Max; k++){
         printf("\r\nk = %d \r\n", k);
         for(int i = 0; i < matrixSize; i++){
@@ -44,7 +44,7 @@ void Power(int matrixSize, int Max){
         for(int i = 0 ; i < matrixSize; i++){
             sum = sum + x[i] * y[i];
         }
-        printf("\t고유치는 : %lf \r\n", eigval = sum);
+        printf("\t고유치는 : %lf \r\n", eigenValue = sum);
         sum = 0.;
         for(int i = 0; i < matrixSize; i++){
             sum = sum + y[i] * y[i];
