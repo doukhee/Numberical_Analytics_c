@@ -84,7 +84,7 @@ void Power(int matrixSize, int Max){
         printf("\t 고유 벡터는 : ");
         /** 행렬의 행만큼 반복 */
         for(int i = 0; i < matrixSize; i++){
-            /** 행렬의 고유 벡터 출력 */
+            /** 행렬의 고유치에 해당하는 고유 벡터 출력 */
             printf("%lf \t", x[i] = y[i]/eta);
         }
     }
